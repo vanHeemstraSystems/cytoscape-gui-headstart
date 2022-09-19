@@ -11,9 +11,6 @@ See [README.md](./100/README.md)
 
 See [README.md](./200/README.md)
 
-Optional: Use Cityscape with ReactJS
-https://github.com/plotly/react-cytoscapejs
-
 ## 300 - Building Our Application
 
 See [README.md](./300/README.md)
