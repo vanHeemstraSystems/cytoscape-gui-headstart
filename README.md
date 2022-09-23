@@ -1,11 +1,11 @@
-cytoscape-gui-headstart
-# Cytoscape GUI - Headstart
+mindmap-management-gui
+# Mindmap Management GUI
 
-This repository contains the Graphical User Interface (GUI) of the Cytoscape (Mind) Map.
+This repository contains the Graphical User Interface (GUI) of Mindmap Management.
 
-Companion repository of "Cytoscape" at https://github.com/vanHeemstraSystems/cytoscape-headstart
+Companion repository of "Mindmap Management" at https://github.com/vanHeemstraSystems/mindmap-management
 
-Based on "citoscape" at https://js.cytoscape.org 
+Based on "cytoscape" at https://js.cytoscape.org 
 
 Based on "Create a food ordering app with Strapi and Next.js" at https://strapi.io/blog/nextjs-react-hooks-strapi-food-app-1
 
