@@ -1,5 +1,5 @@
-cytoscape-headstart
-# Cytoscape - Headstart
+cytoscape-gui-headstart
+# Cytoscape GUI - Headstart
 
 Based on "citoscape" at https://js.cytoscape.org 
 
