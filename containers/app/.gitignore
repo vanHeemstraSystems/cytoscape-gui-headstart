@@ -1,0 +1,5 @@
+node_modules
+docker-compose.dev.yml
+docker-compose.prod.yml
+.env
+secrets/.proxy_password
