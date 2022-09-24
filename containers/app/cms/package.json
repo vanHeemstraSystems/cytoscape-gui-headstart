@@ -1,0 +1,34 @@
+{
+  "name": "cms",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@apollo/react-hooks": "3.1.5",
+    "@apollo/react-ssr": "3.1.5",
+    "@stripe/react-stripe-js": "1.1.2",
+    "@stripe/stripe-js": "1.5.0",
+    "apollo-boost": "0.4.7",
+    "axios": "^0.24.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "graphql": "15.0.0",
+    "https-proxy-agent": "^5.0.0",
+    "isomorphic-fetch": "2.2.1",
+    "js-cookie": "2.2.1",
+    "next": "9.4.0",
+    "next-apollo": "3.1.10",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "reactstrap": "8.10.1"
+  },
+  "scripts": {
+    "local": "cross-env NEXT_PUBLIC_API_URL='http://localhost:1337' node server.js",
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "node server.js -p 3012",
+    "heroku-postbuild": "next build"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}
