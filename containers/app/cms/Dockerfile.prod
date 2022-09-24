@@ -1,0 +1,34 @@
+ARG IMAGE_REPOSITORY
+ARG BASE_VERSION
+# Install dependencies only when needed
+FROM ${IMAGE_REPOSITORY}/node:14-alpine
+
+# See https://stackoverflow.com/questions/29261811/use-docker-compose-env-variable-in-dockerbuild-file
+ARG PROXY_USER
+ARG PROXY_PASSWORD
+ARG PROXY_FQDN
+ARG PROXY_PORT
+ARG NODE_ENV
+ARG NEXT_PUBLIC_API_URL
+
+ENV HTTP_PROXY="http://${PROXY_USER}:${PROXY_PASSWORD}@${PROXY_FQDN}:${PROXY_PORT}"
+ENV HTTPS_PROXY="http://${PROXY_USER}:${PROXY_PASSWORD}@${PROXY_FQDN}:${PROXY_PORT}"
+ENV NODE_ENV=${NODE_ENV}
+ENV NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL}
+
+# Documented at https://medium.com/swlh/dockerize-your-next-js-application-91ade32baa6
+
+# create & set working directory
+RUN mkdir -p /usr/src
+WORKDIR /usr/src
+
+# copy source files
+COPY . /usr/src
+
+# install dependencies
+RUN npm install
+
+# start app
+RUN npm run build
+EXPOSE 3012
+CMD npm run start
